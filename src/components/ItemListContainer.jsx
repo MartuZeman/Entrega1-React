@@ -1,8 +1,8 @@
-function ItemListContainer(){
-    const props = "Hola Bienvenidos!"
+function ItemListContainer(props){
+   
 
     return(
-        <h2>{props}</h2>
+        <h2>{props.greeting}</h2>
     )
 }
 
