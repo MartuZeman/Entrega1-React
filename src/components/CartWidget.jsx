@@ -1,7 +1,7 @@
 function CartWidget(){
     return(
         <i>
-            CartWidget
+            🛒
         </i>
     )
 }

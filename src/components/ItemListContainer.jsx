@@ -1,9 +1,57 @@
+import getMockAPIData, { getProductByCategory } from "../data/mockAPI"
+import { useState,useEffect } from "react"
+import Item from "./Item"
+import { useParams } from "react-router"
+
 function ItemListContainer(props){
-   
+
+    const [products, setProducts] = useState([])
+    const {catParam} = useParams()
+
+    useEffect(()=>{
+
+   if(catParam){
+
+            getProductByCategory(catParam)
+        .then((productList)=> {
+            setProducts(productList)
+        })
+        .catch((error)=>{
+            alert("Algo salio mal en la carga de productos",error)
+        })
+        .finally (()=>{
+            console.log("Esto se ejecuta siempre")
+        })
+
+   }else{
+            getMockAPIData()
+        .then((productList)=> {
+            setProducts(productList)
+        })
+        .catch((error)=>{
+            alert("Algo salio mal en la carga de productos",error)
+        })
+        .finally (()=>{
+            console.log("Esto se ejecuta siempre")
+        })
+   }
+
+
+
+    },[catParam])
+
+
 
     return(
+        <section>
         <h2>{props.greeting}</h2>
+        {products.length === 0 ? "Cargando..." : ""}
+        <div>
+            {products.map( (item) => { return (<Item {...item} key={item.id}/>)})}
+        </div>
+        </section>
     )
 }
+
 
 export default ItemListContainer

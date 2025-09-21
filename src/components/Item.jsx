@@ -1,16 +1,8 @@
-import { useState } from 'react'
 import './Item.css'
+import { Link } from 'react-router'
 
 function Item(props){
 
-    const [state, setState] = useState("No agregado al carrito")
-
-
-function agregarAlCarrito(){
-
-    setState("Item agregado")
-}
-  
     return (
         <div className='item-card'>
             <h3 className='item-title'>{props.title}</h3>
@@ -18,9 +10,9 @@ function agregarAlCarrito(){
             <p> Precio
                 <span>$ {props.price}</span>
             </p>
-            <button onClick={agregarAlCarrito}>Agregar al carrito</button>
-            <br />
-            <small>{state}</small>
+            <Link to={`/detail/${props.id}`}>
+            <button >Ver detalle</button>
+            </Link>
         </div>
     )
 }
