@@ -29,9 +29,10 @@
 .item-card img {
   width: 100%;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain; /* Se ve completa la imagen */
   border-radius: 12px;
   margin-bottom: 10px;
+/* opcional, para rellenar el espacio sobrante */
 }
 
 .item-card p {
