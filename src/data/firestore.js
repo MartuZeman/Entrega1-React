@@ -16,12 +16,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBbJc46sHR8BwipzrhlL5J_USfXtD0w4No",
+  apiKey: import.meta.env.VITE_FIRESTON_APIKEY,
   authDomain: "react-entrega-b359f.firebaseapp.com",
-  projectId: "react-entrega-b359f",
+  projectId: import.meta.env.VITE_FIRESTON_PROYECT_ID,
   storageBucket: "react-entrega-b359f.firebasestorage.app",
   messagingSenderId: "25378207633",
-  appId: "1:25378207633:web:f74871f6eb912c07ca4c30",
+  appId: import.meta.env.VITE_FIRESTON_APP_ID,
 };
 
 // Initialize Firebase
