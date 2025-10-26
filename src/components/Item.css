@@ -32,7 +32,7 @@
   object-fit: contain; /* Se ve completa la imagen */
   border-radius: 12px;
   margin-bottom: 10px;
-/* opcional, para rellenar el espacio sobrante */
+  /* opcional, para rellenar el espacio sobrante */
 }
 
 .item-card p {
@@ -49,6 +49,6 @@
   margin-left: 4px;
 }
 
-.item-card small{
-    color: black;
+.item-card small {
+  color: black;
 }
