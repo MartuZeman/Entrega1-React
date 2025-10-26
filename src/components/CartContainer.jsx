@@ -2,7 +2,7 @@ import cartContext from "../context/cartContext"
 import { useContext } from "react";
 import { Link } from "react-router";
 import { createBuyOrder } from "../data/firestore";
-import FormCheckout from "./formCheckOut"
+import FormCheckout from "./FormPayment";
 
 function CartContainer(){
 
