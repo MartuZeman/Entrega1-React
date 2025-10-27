@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./FormPayment.css";
 
 export default function FormCheckout({ handleCheckout }) {
   const [formData, setFormData] = useState({
@@ -53,8 +54,10 @@ export default function FormCheckout({ handleCheckout }) {
           />
         </label>
       </div>
-      <button type="sumbit">Enviar</button>
-      <button type="reset">Cancelar</button>
+      <div className="botones-container">
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancelar</button>
+      </div>
     </form>
   );
 }

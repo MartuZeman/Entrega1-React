@@ -1,8 +1,9 @@
-import cartContext from "../context/cartContext"
+import cartContext from "../../context/cartContext"
 import { useContext } from "react";
 import { Link } from "react-router";
-import { createBuyOrder } from "../data/firestore";
+import { createBuyOrder } from "../../data/firestore";
 import FormCheckout from "./FormPayment";
+import "./CartContainer.css";
 
 function CartContainer(){
 
@@ -25,10 +26,10 @@ function CartContainer(){
 
     if(cart.length === 0 ){
          return(
-            <div>
+            <div className="volverBtn">
                 <h2>Tu carrito esta vacio</h2>
                 <Link to="/">
-                <button>Volver al inicio</button>
+                <button >Volver al inicio</button>
                 </Link>
             </div>
          )

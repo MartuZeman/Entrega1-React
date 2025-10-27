@@ -1,0 +1,149 @@
+/* Contenedor principal del carrito */
+section {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-family: var(--main-font);
+}
+
+/* Títulos */
+section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+section h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: right;
+  color: #333;
+}
+
+/* Lista de items */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column; /* items en columna */
+  gap: 1rem; /* separación entre items */
+}
+
+/* Cada item de la lista */
+section ul li,
+section ul div {
+  display: flex;
+  flex-direction: column; /* todo en columna */
+  align-items: flex-start;
+  padding: 0.8rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section ul li:hover,
+section ul div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Texto de item */
+section ul li h4,
+section ul div h4 {
+  margin: 0 0 0.3rem 0;
+  font-weight: 600;
+  color: #333;
+}
+
+section ul li p,
+section ul div p {
+  margin: 0 0 0.3rem 0;
+  color: #555;
+}
+
+/* Botón eliminar */
+section ul li button,
+section ul div button {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+section ul li button:hover,
+section ul div button:hover {
+  background-color: #ff3b3b;
+  transform: translateY(-1px);
+}
+
+/* Botones generales del carrito */
+section > div > button {
+  background-color: #3d3d3d;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1em;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+section > div > button:hover {
+  background-color: #555;
+  transform: translateY(-1px);
+}
+
+.volverBtn {
+  display: flex;
+  flex-direction: column; /* para que el h2 y el botón estén uno debajo del otro */
+  align-items: center;    /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente si hace falta */
+  gap: 1rem;              /* separación entre h2 y botón */
+  margin-top: 2rem;       /* opcional: distancia respecto al borde superior */
+}
+
+/* Estilo del h2 */
+.volverBtn h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+/* Estilo del botón */
+.volverBtn button {
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.volverBtn button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+}
+
+
+/* Separador */
+hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}

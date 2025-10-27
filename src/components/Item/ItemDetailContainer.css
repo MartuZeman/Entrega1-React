@@ -1,0 +1,90 @@
+/* Contenedor principal */
+.item-detail-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 24px;
+  gap: 24px;
+  max-width: 900px;
+  margin: 2rem auto; /* centrado en la página */
+  align-items: flex-start;
+  font-family: var(--main-font);
+}
+
+/* Imagen del producto */
+.item-detail-image {
+  width: 300px;        /* ancho fijo o máximo */
+  max-width: 100%;     /* nunca más ancho que el contenedor */
+  height: 300px;       /* altura fija */
+  max-height: 100%;    /* nunca más alto que el contenedor */
+  object-fit: contain; /* mantiene proporción sin cortar */
+  border-radius: 12px;
+  flex-shrink: 0;      /* evita que se encoja */
+}
+
+
+/* Info del producto */
+.item-detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Título */
+.item-detail-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Texto descriptivo y precio */
+.item-detail-text {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Botón agregar al carrito */
+.item-detail-button {
+  padding: 0.6em 1.4em;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 12px;
+  border: none;
+  background-color: #333; /* elegante oscuro */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: start; /* botón alineado al inicio de la info */
+}
+
+/* Hover botón */
+.item-detail-button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive: apila vertical en pantallas pequeñas */
+@media (max-width: 768px) {
+  .item-detail-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .item-detail-image {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .item-detail-button {
+    width: 100%;
+    text-align: center;
+  }
+}

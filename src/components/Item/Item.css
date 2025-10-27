@@ -52,3 +52,22 @@
 .item-card small {
   color: black;
 }
+
+.item-card button {
+  margin-top: 16px; /* aumenta el espacio entre el precio y el botón */
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  background-color: #333; /* ejemplo elegante */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.item-card button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
